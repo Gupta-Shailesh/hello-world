@@ -12,7 +12,6 @@ public class ReusableMethods {
 	public static JsonPath rawToJson(Response res)
 	{
 		String response= res.asString();
-		System.out.println(response);
 		JsonPath js = new JsonPath(response);
 		return js ;
 		

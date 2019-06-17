@@ -23,7 +23,7 @@ package RestAPITest.JsonPlaceHolderApiTest;
 		List<Integer> postIds= jpha.getPostIds(userId);
 		
 		
-		/*for(int postId: postIds)
+		for(int postId: postIds)
 		{
 			allCommentsforpostId = jpha.getCommentsForPostId(postId); 
 			
@@ -46,7 +46,7 @@ package RestAPITest.JsonPlaceHolderApiTest;
 				
 			}
 			
-		}*/
+		}
 
 	}
 	}
