@@ -8,14 +8,14 @@ jobs:
     - checkout
     - restore_cache:
         key: hello-world-{{ checksum "pom.xml" }}
-    - run: mvn package
+    - run: mvn dependency:go-offline
     - save_cache:
         paths:
         - ~/.m2
         key: hello-world-{{ checksum "pom.xml" }}
     - run: mvn package
     - store_test_results:
-        path: target/surefire-reports/Suite
+        path: target/surefire-reports/test
     - store_artifacts:
         path: target/surefire-reports/Suite
 workflows:
