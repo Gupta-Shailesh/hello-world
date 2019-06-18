@@ -15,9 +15,9 @@ jobs:
         key: hello-world-{{ checksum "pom.xml" }}
     - run: mvn package
     - store_test_results:
-        path: target/surefire-reports
+        path: target/surefire-reports/Suite
     - store_artifacts:
-        path: target/surefire-reports
+        path: target/surefire-reports/Suite
 workflows:
   version: 2
   workflow:
