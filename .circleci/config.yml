@@ -13,7 +13,7 @@ jobs: # a collection of steps
           # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
           key: hello-world-{{ checksum "pom.xml" }}
       
-      - run: 
+      - run: mvn package
           
         # gets the project dependencies
       
