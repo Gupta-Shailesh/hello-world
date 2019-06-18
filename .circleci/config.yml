@@ -2,7 +2,7 @@ version: 2 # use CircleCI 2.0
 jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     machine:
-      image: circleci/classic:latest  # pins image to specific version using YYYY-MM format
+    image: circleci/classic:latest  # pins image to specific version using YYYY-MM format
     working_directory: ~/hello-world # directory where steps will run
 
     steps: # a collection of executable commands
@@ -14,9 +14,7 @@ jobs: # a collection of steps
           key: hello-world-{{ checksum "pom.xml" }}
       
       - run: mvn package
-      
-          
-        # gets the project dependencies
+		# gets the project dependencies
       
       - save_cache: # saves the project dependencies
           paths:
