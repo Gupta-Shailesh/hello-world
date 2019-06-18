@@ -22,11 +22,10 @@ jobs: # a collection of steps
           paths:
             - ~/.m2
           key: hello-world-{{ checksum "pom.xml" }}
-      
-      - run: mvn package # run the actual tests
-    
-      - store_test_results:
-          path:target/surefire-result
-      - store_artifacts:
-          path: target/surfire-result
+         
+    - run: mvn package
+    - store_test_results:
+        path: target/surefire-reports
+    - store_artifacts:
+        path: target/surefire-reports
       
