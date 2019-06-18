@@ -14,6 +14,8 @@ jobs: # a collection of steps
           key: hello-world-{{ checksum "pom.xml" }}
       
       - run: mvn package
+      -run |
+          mkdir -p target/test-result
           
         # gets the project dependencies
       
